@@ -1,0 +1,101 @@
+/* This program offers four options it uses a 'DO WHILE' loop. It will run the program while true and stop when false.
+   It uses switch with the 'choice' variable to choose the case to run a program. When the program that the user choose
+   ends switch ends and the loop continues and the meny is shown again. The DO loops until exit.   */
+
+#include <stdio.h>
+#include <conio.h>
+
+int main() {
+	
+	// variables
+	char choice;
+	// the start of the do while loop and will continue until false
+	do{
+		// Display options for the user to see
+		printf("\n\n Menu:\n");
+		printf(" a. Choice 1\n");
+		printf(" b. Choice 2\n");
+		printf(" c. Choice 3\n");
+		printf(" x. Exit \n");
+		// Ask user to input a choice
+		printf("\n Choose an option from above: ");
+		// Read the choice
+		scanf(" %c", &choice);
+		// Switch allows the varible 'choice' to be checked for each case
+		switch (choice) {
+			         // User choose 'a' this program runs
+			case 'a' :
+				     // Inform user of their choice
+				     printf(" \n You have choosen 'a'.\n");
+				     // start case 'a's PrograM
+				     int num,sum;    // Declare veriables
+				     printf("\n Enter numbers to find their sum, end with a '0': \n");  // Inform user what to do
+				     sum = 0;               // Set veriable to 0
+				     scanf( "%d", &num);    // read veriable
+				     while (num > 0)        //  Loop while more than 0	
+					 			     {
+				     	sum+=num;           // Maths bit, add the numbers together
+				     	scanf( "%d", &num);
+					 }
+					 printf("\n Sum =%d", sum); // Display on screen the sum
+					 
+					// Ends switch. Do while loop continues. 
+				    break;
+				   // User choose 'b' this program runs  
+			case 'b' :
+				    // Inform user of their choice
+				    printf("\n You have choosen 'b'.\n");
+				    
+				    // Declare variables
+				    int avg,nu,su,count;
+				    
+				    // Display on screen instuctions to inform user what to do
+				    printf("\n Enter numbers to display their average, end with a '0': \n");
+				    
+				    // Set variables to zero
+				    su=0;
+				    count=0;
+				    
+				    // Read input from keyboard
+				    scanf("%d", &nu);
+				    
+				    // Start while loop. Loop while keyboard number is more than zero
+				    while (nu>0)
+					{
+						su+=nu;            // Digits are added up
+						scanf ("%d", &nu); // Each digit entered is counted
+						count++;           // Variable "count" is incremented by one
+			    	}
+			    	    avg=su/count;       // Average is calculated
+			    	
+			    	// Result is displayed
+			    	printf("\n Their Average = %d\n", avg);
+			    	
+			    	// Switch ends and do while loop continues
+				   	break;
+					// Case 'c' or choice 'c' needs some content
+			case 'c' :
+			        printf("\n You have choosen 'c'.\n");
+					
+					break;
+							
+					// This case ends the program. The loop stops because choice  = 'x'
+			case 'x' :
+					printf("\n You have choosen to exit\n");
+					
+					break;
+					
+					// If anything other than the cases a,b,c and x is choosen default will run
+			default :
+					printf("\n I don't understand your choice");
+					printf("\n Please try again!\n");
+					
+					break;
+					 
+		}
+		// When an 'x' is entered the while loop will be false and will stop
+	} while ( choice != 'x');
+	
+	getch();
+	return 0;
+}

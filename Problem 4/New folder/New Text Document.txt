@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+
+int main() {
+	
+	// variables
+	char choice;
+	
+	do{
+		printf("\n\nMenu:\n");
+		printf("a. Choice 1\n");
+		printf("b. Choice 2\n");
+		printf("c. choice 3\n");
+		printf("x. Exit \n");
+		
+		printf("Choose an option from above: ");
+		scanf(" %c", &choice);
+		
+		switch (choice) {
+			
+			case 'a' :
+				     printf("\nYou have choosen 'a'.\n");
+				     				     
+				     break;
+				     
+			case 'b' :
+				    printf("\nYou have choosen 'b'.\n");
+					
+					break;
+					
+			case 'c' :
+			        printf("\nYou have choosen 'c'.\n");
+					
+					break;		
+					
+			case 'x' :
+					printf("\nYou have choosen to exit\n");
+					
+					break;
+					
+			default :
+					printf("\nI don't understand your choice");
+					printf("\nPlease try again!\n");
+					
+					break;
+					 
+		}
+		
+	} while ( choice != 'x');
+	
+	return 0;
+}
